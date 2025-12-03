@@ -7,7 +7,6 @@
 
 body {
     font-family: 'MainFont';
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -16,8 +15,8 @@ body {
 
 header {
     background: linear-gradient(180deg, #0e0e16 0%, #1f1f31 100%);
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    box-shadow: 0 2px 10px #000000;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -44,17 +43,17 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 5rem;
 }
 
 nav a {
     text-decoration: none;
     color: #fbf9fe;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 5px;
     transition: all 0.3s ease;
     white-space: nowrap;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 nav a:hover {
@@ -100,12 +99,14 @@ a {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 
 #img-monza {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 
 .img-tooltip {
@@ -148,27 +149,23 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
-tr:hover {
-    background-color: #f5f5f5;
-}
-
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
 .tables-container {
     display: flex;
-    gap: 20rem;
+    gap: 26rem;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
 }
 
-.table-wrapper {
+.table {
     flex: 0 0 35%;
 }
 
-.table-wrapper h2 {
+.table h2 {
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -180,28 +177,7 @@ table {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 768px) {
-    .tables-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .table-wrapper {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    table {
-        font-size: 0.8rem;
-    }
-    
-    th, td {
-        padding: 0.5rem;
-    }
-}
-
-.center-images {
+.images {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -212,7 +188,7 @@ table {
     gap: 3rem;
 }
 
-.center-images img {
+.images img {
     width: 250px;
     height: auto;
     border-radius: 10px;
