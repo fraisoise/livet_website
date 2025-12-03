@@ -1,18 +1,16 @@
 /*Code pour l'ensemble des pages html*/
-
 @font-face {
     font-family: 'MainFont';
     src: url('./fonts/main_font.ttf') format('truetype');
 }
-
 body {
     font-family: 'MainFont';
     display: flex;
     flex-direction: column;
     margin: 0;
     background-color: #bebed6;
+    min-height: 100vh;
 }
-
 header {
     background: linear-gradient(180deg, #0e0e16 0%, #1f1f31 100%);
     padding: 1rem;
@@ -24,28 +22,30 @@ header {
     flex-direction: column;
     color: #fbf9fe;
 }
-
-
+header h1 {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+}
 .logo {
     height: 30px;
     width: auto;
     position: static;
-    left: 32px;
-    top: 40px;
 }
-
 nav {
     background-color: transparent;
     padding: 1rem;
+    width: 100%;
 }
-
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 5rem;
+    margin: 0 auto;
+    padding: 0;
+    flex-wrap: wrap;
 }
-
 nav a {
     text-decoration: none;
     color: #fbf9fe;
@@ -55,16 +55,13 @@ nav a {
     white-space: nowrap;
     font-size: 0.8rem;
 }
-
 nav a:hover {
     border-bottom: 2px solid #fbf9fe;
 }
-
 #Select {
     background-color: #0e0e16;
     color: #fbf9fe;
 }
-
 footer {
     background: linear-gradient(180deg, #1f1f31 0%, #0e0e16 100%);
     color: #fbf9fe;
@@ -73,42 +70,52 @@ footer {
     justify-content: center;
     align-items: center;
     align-content: center;
+    text-align: center;
+}
+.footer-content h3 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+.footer-content p {
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-
 /*Code pour index.html*/
-
-
 main {
     padding: 3rem 2rem;
     margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
 }
-
+main h2 {
+    font-size: clamp(1.3rem, 3.5vw, 2rem);
+}
+main p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.6;
+}
 a {
     text-decoration: none;
     color: #000000;
 }
-
 .img-container {
     position: relative;
     display: inline-block;
     width: 40%;
+    min-width: 250px;
 }
-
 #img-F1 {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 10px;
 }
-
 #img-monza {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 10px;
 }
-
 .img-tooltip {
     position: absolute;
     bottom: 10px;
@@ -120,8 +127,8 @@ a {
     border-radius: 5px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
 }
-
 .img-container:hover .img-tooltip {
     opacity: 1;
 }
@@ -135,48 +142,40 @@ table {
     background-color: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
 th {
     background: linear-gradient(180deg, #0e0e16 0%, #1f1f31 100%);
     color: #fbf9fe;
     padding: 1rem;
     text-align: left;
     font-weight: bold;
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
-
 td {
     padding: 0.8rem 1rem;
     border-bottom: 1px solid #ddd;
+    font-size: clamp(0.75rem, 1.8vw, 0.95rem);
 }
-
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
-
 .tables-container {
     display: flex;
-    gap: 26rem;
+    gap: 2rem;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
 }
-
 .table {
     flex: 0 0 35%;
+    min-width: 300px;
 }
-
 .table h2 {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
 }
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
 .images {
     position: absolute;
     left: 50%;
@@ -187,10 +186,179 @@ table {
     align-items: center;
     gap: 3rem;
 }
-
 .images img {
     width: 250px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/*Responsive*/
+
+/* écrans ≤ 1024px */
+@media screen and (max-width: 1024px) {
+    nav ul {
+        gap: 2rem;
+    }
+    
+    .tables-container {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .images {
+        top: 3rem;
+    }
+    
+    .images img {
+        width: 200px;
+    }
+}
+
+/* écrans ≤ 768px */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    nav a {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    main {
+        padding: 2rem 1rem;
+    }
+    
+    .img-container {
+        width: 60%;
+        min-width: 200px;
+    }
+    
+
+    .tables-container {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+    
+    .table {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .images {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        gap: 1.5rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .images img {
+        width: 180px;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
+    
+    th, td {
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+/* écrans ≤ 480px*/
+@media screen and (max-width: 480px) {
+    .logo {
+        height: 25px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+    }
+    
+    main {
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .img-container {
+        width: 90%;
+        margin: 1rem auto;
+        display: block;
+    }
+    
+    .tables-container {
+        padding: 0.5rem;
+        gap: 2rem;
+    }
+    
+    .table {
+        max-width: 100%;
+    }
+    
+    table {
+        font-size: 0.75rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+    
+    .images {
+        gap: 1rem;
+    }
+    
+    .images img {
+        width: 140px;
+    }
+    
+    footer {
+        padding: 1rem 0.5rem;
+    }
+    
+    .footer-content h6 {
+        font-size: 0.7rem;
+    }
+}
+
+/*écrans ≤ 360px*/
+@media screen and (max-width: 360px) {
+    header h1 {
+        font-size: 1rem;
+    }
+    
+    nav a {
+        font-size: 0.65rem;
+        padding: 0.6rem;
+    }
+    
+    table {
+        font-size: 0.7rem;
+    }
+    
+    th, td {
+        padding: 0.4rem 0.3rem;
+    }
+    
+    .images img {
+        width: 120px;
+    }
 }
