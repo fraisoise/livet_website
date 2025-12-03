@@ -58,9 +58,19 @@ nav a:hover {
     color: #fbf9fe;
 }
 
+#Select {
+    background-color: #0e0e16;
+    color: #fbf9fe;
+}
+
 main {
     padding: 3rem 2rem;
     margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
 }
 
 .img-container {
@@ -70,6 +80,12 @@ main {
 }
 
 #img-F1 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#img-monza {
     width: 100%;
     height: auto;
     display: block;
@@ -95,7 +111,7 @@ main {
 footer {
     background: linear-gradient(180deg, #1f1f31 0%, #0e0e16 100%);
     color: #fbf9fe;
-    padding: 2rem;
+    padding: 1rem;
     margin-top: auto;
     justify-content: center;
     align-items: center;
