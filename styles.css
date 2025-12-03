@@ -51,11 +51,12 @@ nav a {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.7rem;
 }
 
 nav a:hover {
-    background-color: #0e0e16;
-    color: #fbf9fe;
+    border-bottom: 2px solid #fbf9fe;
 }
 
 #Select {
