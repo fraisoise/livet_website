@@ -193,9 +193,46 @@ tr:nth-child(even) {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/*Code pour environment.html*/
+
+/*Code pour environment.html*/
+.environment-container {
+    max-width: 1200px;
+}
+
+.environment-list {
+    flex: 1;
+    order: 1;
+}
+
+.environment-item {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    line-height: 1.6;
+}
+
+.environment-image {
+    flex: 0 0 300px;
+    order: 2;
+}
+
+.environment-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.environment-image p {
+    margin-left: 4rem;
+}
+
 /*Responsive*/
 
-/* écrans ≤ 1024px */
+/* écrans ≤ 1024px 
 @media screen and (max-width: 1024px) {
     nav ul {
         gap: 2rem;
@@ -215,7 +252,7 @@ tr:nth-child(even) {
     }
 }
 
-/* écrans ≤ 768px */
+ écrans ≤ 768px 
 @media screen and (max-width: 768px) {
     header {
         padding: 0.5rem;
@@ -276,7 +313,7 @@ tr:nth-child(even) {
     }
 }
 
-/* écrans ≤ 480px*/
+/* écrans ≤ 480px */
 @media screen and (max-width: 480px) {
     .logo {
         height: 25px;
