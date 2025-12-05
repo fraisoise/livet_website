@@ -81,6 +81,11 @@ footer {
     padding: 1rem;
 }
 
+footer a {
+    color: #fbf9fe;
+    text-decoration: underline;
+}
+
 /*Code pour index.html*/
 main {
     padding: 3rem 2rem;
